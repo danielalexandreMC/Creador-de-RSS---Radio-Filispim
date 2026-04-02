@@ -1,1 +1,25 @@
+# ============================================================================
+# Rádio FilispiM — Xestor de RSS
+# Protección do directorio de datos (data/.htaccess)
+# ============================================================================
+#
+# Descrición:
+#   Este ficheiro protexe o directorio data/ contra o acceso directo
+#   desde o navegador web. O directorio data/ contén o ficheiro
+#   data.json con toda a información da aplicación (usuario admin,
+#   feeds, entradas, rexistro de cambios) e debe ser inaccesible
+#   publicamente.
+#
+# Seguridade:
+#   - Denega calquera acceso directo a ficheiros neste directorio
+#   - PHP segue tendo acceso (para ler/escribir data.json) porque
+#     as restricións .htaccess só afectan ás peticións HTTP, non
+#     ao sistema de ficheiros do servidor
+#
+# IMPORTANTE: Non elimines nin modifiques este ficheiro a menos que
+# sepas exactamente o que estás a facer.
+#
+# ============================================================================
 
+# Denegar acceso directo desde o navegador
+Deny from all
